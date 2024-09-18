@@ -4,3 +4,6 @@
   padding: 2rem;
  
 }
+.container {
+  padding: 0 40px; /* 30px padding on left and right */
+}
