@@ -1,9 +1,26 @@
+/* Global Styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
- 
 }
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+}
+
 .container {
-  padding: 0 40px; /* 30px padding on left and right */
+  padding: 0 40px; 
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+  #root {
+    max-width: 100%; 
+    padding: 0; 
+    margin: 0; 
+  }
+
+  .container {
+    padding: 0; 
+  }
 }

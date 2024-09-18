@@ -1,0 +1,80 @@
+/* Navbar.css */
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space between */
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    font-family: "Poppins";
+    max-width: 1500px;
+}
+
+
+.nav-logo .icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links {
+    color:black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-item {
+    line-height: 40px;
+}
+
+.nav-icon {
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 960px) {
+    .nav-menu {
+        display: flex; /* Show menu in column */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        height: 100vh;
+        position: absolute; /* Positioning for dropdown */
+        top: 80px; /* Below navbar */
+        left: -110%; /* Initially hidden */
+        opacity: 1; /* Initially hidden */
+        transition: all 0.5s ease; /* Smooth transition */
+        background-color: #1F8498;
+        ;
+        z-index: 1; /* Ensure dropdown is above other elements */
+    }
+
+    .nav-menu.active {
+        left: 0; /* Show menu when active */
+        opacity: 1; /* Make it visible */
+        transition: all 0.5s ease; /* Smooth transition */
+    }
+
+    .nav-icon {
+        display: block; /* Show hamburger icon in mobile view */
+        cursor: pointer; /* Pointer cursor for clickability */
+        color: black;
+        margin-right: 20px; /* Spacing from right edge */
+        font-size: 2rem; /* Icon size */
+    }
+}
