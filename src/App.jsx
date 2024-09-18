@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import PopularDocuments from './components/popular/PopularDocuments'; 
 import Reference from './components/reference/Reference';
 import Blog from './components/blog/Blog'; 
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
     return (
