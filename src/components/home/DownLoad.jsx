@@ -5,7 +5,7 @@ function Download() {
   return (
     <div className="bg-[#008699] container h-[60vh] rounded-2xl text-white">
       <div className="row h-full">
-        <div className="col-md-4 flex gap-5 h-full flex-col justify-center">
+        <div className="col-md-4 pr-3 flex gap-5 h-full flex-col justify-center">
           <h1 className="text-5xl poppins-medium text-white ">
             Download our app
           </h1>
