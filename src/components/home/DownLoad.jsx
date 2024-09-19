@@ -24,7 +24,7 @@ function Download() {
           <img
             src="/src/assets/images/wrapper.png"
             alt="img"
-            className="h-full w-full -mr-3 object-cover object-center float-right"
+            className="h-full w-full -mr-3 object-cover rounded-tr-xl object-center float-right"
           />
         </div>
       </div>
