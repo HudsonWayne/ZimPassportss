@@ -3,7 +3,8 @@ import PopularDocuments from "./populardocuments"
 
 const Home = () => {
   return (
-    <div>Home
+    <div>
+
       <PopularDocuments />
     </div> 
   )

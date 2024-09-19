@@ -9,38 +9,60 @@
     top: 0;
     z-index: 20;
 }
+.buttons{
+    padding-left: 50px;
+}
+
+.upload-button{
+    padding: 10px 20px;
+    background: #FFF0BC;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.download-button{
+    padding: 10px 20px;
+    background:#182325;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    
+}
+
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Adjusted to space between */
-    align-items: center;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
     width: 100%;
     height: 80px;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif; /* Ensure Poppins is applied */
     max-width: 1500px;
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
 }
 
+.nav-logo {
+    display: flex; /* Ensure logo and text are aligned */
+    align-items: center; /* Center vertically */
+}
 
 .nav-logo .icon {
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 300px; /* Set width of the logo icon */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    text-align: center;
-}
 
-.nav-links {
-    color:black;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
 
-.nav-item {
-    line-height: 40px;
+/* Existing styles remain unchanged... */
+
+.nav-menu .nav-item {
+    display: flex; /* Ensure items are aligned properly */
+    align-items: center; /* Center vertically */
 }
 
 .nav-icon {
@@ -60,7 +82,59 @@
         opacity: 1; /* Initially hidden */
         transition: all 0.5s ease; /* Smooth transition */
         background-color: #1F8498;
-        ;
+        z-index: 1; /* Ensure dropdown is above other elements */
+    }
+
+    .nav-menu.active {
+        left: 0; /* Show menu when active */
+        opacity: 1; /* Make it visible */
+        transition: all 0.5s ease; /* Smooth transition */
+        height: 40vh;
+    }
+
+    .nav-icon {
+        display: block; /* Show hamburger icon in mobile view */
+        cursor: pointer; /* Pointer cursor for clickability */
+        color: black;
+        margin-right: 20px; /* Spacing from right edge */
+        font-size: 2rem; /* Icon size */
+    }
+}
+
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    font-weight:500 ;
+    padding: 0.5rem 1rem; /* Adjust padding for better click area */
+}
+
+.nav-item {
+    line-height: 40px; /* Adjust for vertical alignment */
+}
+
+.nav-icon {
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 960px) {
+    .nav-menu {
+        display: flex; /* Show menu in column */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        height: 100vh;
+        position: absolute; /* Positioning for dropdown */
+        top: 80px; /* Below navbar */
+        left: -110%; /* Initially hidden */
+        opacity: 1; /* Initially hidden */
+        transition: all 0.5s ease; /* Smooth transition */
+        background-color: #1F8498;
         z-index: 1; /* Ensure dropdown is above other elements */
     }
 

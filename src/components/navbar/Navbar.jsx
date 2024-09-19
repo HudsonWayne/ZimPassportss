@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="nav-container">
-                <NavLink exact to="/" className="nav-logo">
+                <NavLink to="/" className="nav-logo">
                     <span className="icon">
                         <img src={logo} alt="Logo" />
                     </span>
@@ -23,10 +23,8 @@ const Navbar = () => {
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
                         <NavLink
-                            exact
                             to="/popular_documents"
-                            activeClassName="active"
-                            className="nav-links"
+                            className={({ isActive }) => (isActive ? "nav-links active" : "nav-links")}
                             onClick={handleClick}
                         >
                             Popular Documents
@@ -34,10 +32,8 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <NavLink
-                            exact
                             to="/reference"
-                            activeClassName="active"
-                            className="nav-links"
+                            className={({ isActive }) => (isActive ? "nav-links active" : "nav-links")}
                             onClick={handleClick}
                         >
                             Reference
@@ -45,24 +41,24 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <NavLink
-                            exact
                             to="/blog"
-                            activeClassName="active"
-                            className="nav-links"
+                            className={({ isActive }) => (isActive ? "nav-links active" : "nav-links")}
                             onClick={handleClick}
                         >
                             Blog
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink exact to="/" onClick={handleClick}>
-                            <FontAwesomeIcon icon={faGlobe} size="2x" />
+                        <NavLink to="/" onClick={handleClick}>
+                            <div style={{ width: '22px', height: '22px', color: 'black', }}>
+                                <FontAwesomeIcon className="globe" icon={faGlobe} style={{ width: '100%', height: '100%', color: 'black', }} />
+                            </div>
                         </NavLink>
                     </li>
                     <div className="buttons">
-                        <button type="button">Upload Photo</button>
-                        <button type="button">
-                            <FontAwesomeIcon icon={faApple} size="2x" /> Download
+                        <button type="button" className="upload-button">Upload Photo</button>
+                        <button type="button" className="download-button">
+                            <FontAwesomeIcon style={{ width: '22px', height: '22px', color: 'white'}} icon={faApple} size="2x" /> Download
                         </button>
                     </div>
                 </ul>
@@ -70,9 +66,9 @@ const Navbar = () => {
                 {/* Hamburger Icon */}
                 <div className="nav-icon" onClick={handleClick}>
                     {click ? (
-                        <span className="icon">✖</span> // 
+                        <span className="icon">✖</span> // Close icon
                     ) : (
-                        <span className="icon">☰</span> // 
+                        <span className="icon">☰</span> // Open icon
                     )}
                 </div>
             </div>
