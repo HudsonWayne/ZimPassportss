@@ -124,6 +124,11 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 960px) {
+    .nav-logo .icon {
+        display: inline-block;
+        width: 232px;
+        height: auto;
+    }
     .nav-menu {
         display: flex; /* Show menu in column */
         flex-direction: column; /* Stack items vertically */

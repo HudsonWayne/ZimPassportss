@@ -1,0 +1,8 @@
+.upload-button{
+    padding: 10px 10px;
+    background: #FFF0BC;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}

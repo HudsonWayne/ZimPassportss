@@ -1,32 +1,94 @@
-.banner{
+/* src/components/banner/Banner.css */
+
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
     width: 100%;
 }
-.container-one{
+
+.container-one {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .text-section {
-    font-family: Poppins;
-    font-size: 50px;
+    font-family: Poppins, sans-serif;
+    font-size: 50px; /* Default font size */
     font-weight: 500;
     line-height: 75.4px;
     letter-spacing: -0.01em;
     text-align: left;
     margin-top: 40px;
 }
-.text-section p{
 
-    font-family: Poppins;
-    font-size: 20px;
+.text-section p {
+    font-family: Poppins, sans-serif;
+    font-size: 20px; /* Default paragraph font size */
     font-weight: 400;
     line-height: 36px;
     text-align: left;
     margin-top: 50px;
+}
 
+.btn {
+    font-size: 44px; /* Default button font size */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .text-section {
+        font-size: 40px; /* Decrease font size for medium screens */
+        line-height: 60px; /* Adjust line height */
+    }
+
+    .text-section p {
+        font-size: 18px; /* Decrease paragraph font size */
+        line-height: 30px; /* Adjust line height */
+        margin-top: 40px; /* Adjust margin */
+    }
+
+    .btn {
+        font-size: 36px; /* Decrease button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: auto; /* Remove fixed height on small screens */
+        padding: 20px; /* Add padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .container-one {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center content */
+        width: 100%; /* Full width */
+    }
+
+    .text-section {
+        text-align: center; /* Center text on smaller screens */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+        font-size: 30px; /* Further decrease font size for small screens */
+        line-height: 45px; /* Adjust line height for readability */
+    }
+
+    .text-section p {
+        font-size: 16px; /* Further decrease paragraph font size */
+        line-height: 28px; /* Adjust line height for readability */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .btn {
+        font-size: 28px; /* Further decrease button font size */
+        margin-top: 15px; /* Add space above button */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Ensure image is responsive */
+        height: auto; /* Maintain aspect ratio of the image */
+    }
 }
